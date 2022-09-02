@@ -153,6 +153,13 @@ class UploadField extends \SilverStripe\AssetAdmin\Forms\UploadField
                     return file.previewElement.classList.add('dz-success');
                 }		
 			};
+            config['accept'] = function(file, done) {
+                if (!(/^[\w-.]+$/).test(file.name)) {
+                    alert('Illegal characters detected in file name');
+                    done('Illegal characters detected in file name');
+                }
+                else { done(); }
+            };
 	
 			window[name+'Dropzone'] = new Dropzone('#' + name + '-dropzone .droparea', config);
 			
