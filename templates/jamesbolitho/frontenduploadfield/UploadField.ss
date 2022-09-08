@@ -2,7 +2,7 @@
 	<div class="droparea">
         <span>
 			Drop files here or <a class="btn btn-primary">click here to select files</a>. 
-      File names must contain only letters, numbers, underscore, hyphen or period.
+      File names must contain only letters, numbers, underscores, hyphens or full stops.
 		</span>
     </div>
     <div class="{$Name}-previews-container dz-previews-container">
