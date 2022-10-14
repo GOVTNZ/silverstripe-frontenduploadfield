@@ -154,7 +154,7 @@ class UploadField extends \SilverStripe\AssetAdmin\Forms\UploadField
                 }		
 			};
             config['accept'] = function(file, done) {
-                if (!(/^[\w-.]+$/).test(file.name)) {
+                if (!(/^[\w.-]+( [\w.-]+)*$/).test(file.name)) {
                     alert('Invalid characters detected in file name');
                     done('Invalid characters detected in file name');
                 }
